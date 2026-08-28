@@ -1,0 +1,8 @@
+{
+  "name": "Remix Mundo Azul – Central de Acompanhamento",
+  "description": "Sistema Web Full-Stack para acompanhamento multidisciplinar do desenvolvimento infantil com TEA para família, profissionais e escola.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

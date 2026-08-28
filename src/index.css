@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-fredoka: 'Fredoka', cursive, sans-serif;
+  --font-nunito: 'Nunito', sans-serif;
+  --color-brand-blue: #1E5FA6;
+  --color-brand-blue-dark: #154578;
+  --color-brand-light-blue: #EAF5FC;
+  --color-brand-light-blue-2: #DCEFFB;
+  --color-brand-mint: #6FD9C0;
+  --color-brand-yellow: #FFCB4D;
+  --color-brand-pink: #FF9EC7;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Fredoka', sans-serif;
+}
+
+/* Custom smooth scroll and scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(234, 245, 252, 0.5);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: #C4DDEE;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1E5FA6;
+}
