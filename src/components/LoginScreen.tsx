@@ -288,52 +288,12 @@ export const LoginScreen: React.FC = () => {
                 initial={{ opacity: 0, y: -8 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
-                className="mb-4 p-3.5 bg-rose-50 border border-rose-200 text-rose-800 rounded-2xl text-xs font-semibold space-y-2.5"
+                className="mb-4 p-3.5 bg-rose-50 border border-rose-200 text-rose-800 rounded-2xl text-xs font-semibold space-y-2"
               >
                 <div className="flex items-start gap-2.5">
                   <AlertCircle className="w-4 h-4 text-rose-600 shrink-0 mt-0.5" />
                   <span className="leading-snug">{errorMessage}</span>
                 </div>
-
-                {errorMessage.includes('unauthorized-domain') && (
-                  <div className="pt-2 border-t border-rose-200/80 text-[11px] font-normal text-rose-950 space-y-2">
-                    <p className="font-bold text-rose-900 flex items-center gap-1.5">
-                      <Globe className="w-3.5 h-3.5 text-[#1E5FA6]" />
-                      Como resolver em 1 minuto no Firebase:
-                    </p>
-                    <ol className="list-decimal list-inside space-y-1 text-gray-700 bg-white/90 p-2.5 rounded-xl border border-rose-100">
-                      <li>Acesse o <strong>Firebase Console</strong> do seu projeto</li>
-                      <li>Vá em <strong>Authentication</strong> &gt; aba <strong>Settings (Configurações)</strong></li>
-                      <li>Em <strong>Domínios Autorizados</strong>, clique em <strong>Adicionar domínio</strong></li>
-                      <li>Cole o domínio abaixo:</li>
-                    </ol>
-
-                    <div className="flex items-center gap-1.5 bg-white p-1.5 rounded-xl border border-gray-200">
-                      <code className="text-[11px] font-mono text-[#154578] font-bold px-2 flex-1 truncate select-all">
-                        {currentHostname || 'ais-dev-...run.app'}
-                      </code>
-                      <button
-                        type="button"
-                        onClick={handleCopyHostname}
-                        className="px-2.5 py-1 rounded-lg bg-[#1E5FA6] text-white font-bold text-[10px] flex items-center gap-1 hover:bg-[#154578] transition-all cursor-pointer shrink-0"
-                      >
-                        {copiedDomain ? <Check className="w-3 h-3 text-emerald-300" /> : <Copy className="w-3 h-3" />}
-                        <span>{copiedDomain ? 'Copiado!' : 'Copiar'}</span>
-                      </button>
-                    </div>
-
-                    <div className="pt-1 flex items-center justify-between">
-                      <button
-                        type="button"
-                        onClick={() => loginAsDemoRole('admin')}
-                        className="text-[11px] font-bold text-[#1E5FA6] hover:underline cursor-pointer flex items-center gap-1"
-                      >
-                        <Sparkles className="w-3 h-3 text-amber-500" />
-                        <span>Acessar temporariamente como Admin (Demo)</span>
-                      </button>
-                    </div>
-                  </div>
-                )}
               </motion.div>
             )}
 
