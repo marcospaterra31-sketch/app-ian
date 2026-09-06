@@ -538,11 +538,49 @@ export const LoginScreen: React.FC = () => {
             </form>
           )}
 
-          {/* Footer RBAC Note */}
-          <div className="mt-6 pt-4 border-t border-gray-100 text-center">
-            <div className="inline-flex items-center gap-1.5 text-[11px] text-gray-400 font-medium">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-              <span>Ambiente Seguro com Google Firebase Authentication & RBAC</span>
+          {/* Footer RBAC Note & Quick Direct Access */}
+          <div className="mt-6 pt-4 border-t border-gray-100 space-y-3">
+            <div className="text-center">
+              <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">
+                Acesso Rápido por Perfil
+              </p>
+              <div className="grid grid-cols-2 gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => loginAsDemoRole('admin')}
+                  className="py-1.5 px-2 bg-blue-50 hover:bg-blue-100 text-[#1E5FA6] rounded-xl text-[11px] font-bold transition-all flex items-center justify-center gap-1 cursor-pointer"
+                >
+                  <span>👑 Super Admin</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => loginAsDemoRole('parent')}
+                  className="py-1.5 px-2 bg-amber-50 hover:bg-amber-100 text-amber-800 rounded-xl text-[11px] font-bold transition-all flex items-center justify-center gap-1 cursor-pointer"
+                >
+                  <span>👨‍👩‍👦 Pais / Família</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => loginAsDemoRole('therapist')}
+                  className="py-1.5 px-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 rounded-xl text-[11px] font-bold transition-all flex items-center justify-center gap-1 cursor-pointer"
+                >
+                  <span>🩺 Terapeuta (TO/Fono)</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => loginAsDemoRole('school')}
+                  className="py-1.5 px-2 bg-purple-50 hover:bg-purple-100 text-purple-800 rounded-xl text-[11px] font-bold transition-all flex items-center justify-center gap-1 cursor-pointer"
+                >
+                  <span>🏫 Escola / Pedagógico</span>
+                </button>
+              </div>
+            </div>
+
+            <div className="pt-2 text-center">
+              <div className="inline-flex items-center gap-1.5 text-[11px] text-gray-400 font-medium">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Ambiente Seguro com Google Firebase Authentication & Firestore</span>
+              </div>
             </div>
           </div>
         </motion.div>
